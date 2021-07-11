@@ -38,76 +38,14 @@
   margin-bottom: 20px;
 }
 
-.list-task {
+.left-side #show-number span {
+  display: inline-block;
+  margin-right: 16px;
+  font-size: 36px;
+}
+.list {
   display: flex;
   margin: 20px 0;
-}
-
-.list-task .task-name {
-  flex: 60%;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 36px;
-  padding-left: 10px;
-}
-
-.text-success {
-  color: #6caa08 !important;
-}
-
-.list-task .task-isdone {
-  flex: 40%;
-  text-align: right;
-}
-
-.left-side .btn-delete {
-  background: #ff0000;
-  border-radius: 10px;
-  width: 32px;
-  height: 35px;
-  border: 0;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 27px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.left-side .btn-delete:active {
-  background: #850000;
-  transition: 0.4s;
-}
-
-.left-side .btn-done {
-  background: #6caa08;
-  border-radius: 10px;
-  height: 35px;
-  border: 0;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 27px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: 0.4s;
-  padding: 0 30px;
-  margin-right: 5px;
-}
-
-.left-side .btn-done:active {
-  background: #467200;
-  transition: 0.4s;
-}
-
-.left-side .row-task {
-  margin: 10px 0;
-}
-
-.img-todo-left {
-  width: 70%;
 }
 
 .text-center {
@@ -128,12 +66,12 @@
 .right-side .card {
   background: #fefefe;
   width: 750px;
-  /* height: 400px; */
+  height: 400px;
   padding: 0px 50px;
   border-radius: 3px;
 }
 
-.right-side .card .label-input-task {
+.right-side .card .label-input {
   display: block;
   font-style: normal;
   font-weight: 300;
@@ -143,7 +81,7 @@
   margin-top: 80px;
 }
 
-.right-side .card .input-task {
+.right-side .card .input {
   margin-top: 10px;
   background: #f1f1f1;
   border: 2px solid #d5d5d5;
@@ -152,14 +90,14 @@
   width: 100%;
   height: 50px;
   font-size: 20px;
+  padding: 8px;
 }
 
-.right-side .card .input-task:focus {
+.right-side .card .input:focus {
   outline: 0;
-  padding: 15px;
 }
 
-.right-side .card .btn-add-task {
+.right-side .card .btn-submit {
   height: 55px;
   width: 100%;
   background: #00d1ff;
@@ -175,18 +113,7 @@
   cursor: pointer;
 }
 
-.right-side .card .btn-add-task:active {
+.right-side .card .btn-submit:active {
   background: #008baa;
   transition: 0.4s;
-}
-
-.right-side .card .desc-input-task {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 27px;
-  color: #979797;
-  text-align: right;
-  margin-top: 64px;
-  margin-bottom: 31px;
 }
