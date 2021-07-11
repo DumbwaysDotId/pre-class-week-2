@@ -1,25 +1,25 @@
-let tasks = [];
+let todos = [];
 
-const showTask = document.getElementById("show-todo");
-const btnSubmit = document.getElementById("btn-input-task");
+const showTodo = document.getElementById("show-todo");
+const btnSubmit = document.getElementById("btn-input-todo");
 
 function renderTodo() {
-  let taskElements = "";
+  let todoElements = "";
 
-  if (tasks.length < 1) {
-    taskElements += `
+  if (todos.length < 1) {
+    todoElements += `
         <div class="text-center">
-            <img src="img/todo_2.svg" alt="img task" class="img-todo-left">
+            <img src="img/todo_2.svg" alt="img todo" class="img-todo-left">
         </div>
         `;
   }
 
-  for (elem of tasks) {
+  for (elem of todos) {
     const id = elem.id;
     const description = elem.description;
     const isDone = elem.isDone;
 
-    let btnDone = `<button class="btn-done" onclick="doneTask(${id})">Done</button>`;
+    let btnDone = `<button class="btn-done" onclick="doneTodo(${id})">Done</button>`;
 
     let textSuccess = "";
 
@@ -28,57 +28,58 @@ function renderTodo() {
       textSuccess = "text-success";
     }
 
-    taskElements += `
-        <div class="list-task">
-            <p class="task-name ${textSuccess}">${description}</p>
-            <div class="task-isdone">
+    todoElements += `
+        <div class="todo">
+            <p class="todo-name ${textSuccess}">${description}</p>
+            <div class="todo-isdone">
                 ${btnDone}
-                <button class="btn-delete" onclick="deleteTask(${id})">X</button>
+                <button class="btn-delete" onclick="deleteTodo(${id})">X</button>
             </div>
-        </div
+        </div>
         `;
   }
 
-  showTask.innerHTML = taskElements;
+  showTodo.innerHTML = todoElements;
 }
 
-btnSubmit.addEventListener("click", addTask);
+btnSubmit.addEventListener("click", addTodo);
 
-function addTask() {
-  const taskInput = document.getElementById("input-task");
+function addTodo() {
+  const todoInput = document.getElementById("input-todo");
 
-  if (!taskInput.value) {
-    alert("Task input is not be empty");
+  if (!todoInput.value) {
+    alert("todo input is not be empty");
     return;
   }
 
-  const task = {
+  const todo = {
     id: Date.now(),
-    description: taskInput.value,
+    description: todoInput.value,
     isDone: false,
   };
 
-  tasks.push(task);
+  todos.push(todo);
 
-  taskInput.value = "";
+  todoInput.value = "";
   renderTodo();
 }
 
-function deleteTask(id) {
-  for (let index = 0; index < tasks.length; index++) {
+function deleteTodo(id) {
+  for (let index = 0; index < todos.length; index++) {
     console.log("id", id);
     console.log("index", index);
-    if (id === tasks[index].id) {
-      tasks.splice(index, 1);
+    if (id === todos[index].id) {
+      todos.splice(index, 1);
     }
   }
   renderTodo();
 }
 
-function doneTask(id) {
-  for ([index, elem] of tasks.entries()) {
-    if (id === tasks[index].id) {
-      tasks[index].isDone = true;
+// Done TODO
+function doneTodo(id) {
+  for (i = 0; i < todos.length; i++) {
+    if (id == todos[i].id) {
+      todos[i].isDone = true;
     }
   }
   renderTodo();

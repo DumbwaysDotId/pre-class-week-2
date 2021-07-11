@@ -38,12 +38,12 @@
   margin-bottom: 20px;
 }
 
-.list-task {
+.todo {
   display: flex;
   margin: 20px 0;
 }
 
-.list-task .task-name {
+.todo .todo-name {
   flex: 60%;
   font-style: normal;
   font-weight: bold;
@@ -52,15 +52,14 @@
   padding-left: 10px;
 }
 
-.text-success {
-  color: #6caa08 !important;
-}
-
-.list-task .task-isdone {
+.todo .todo-isdone {
   flex: 40%;
   text-align: right;
 }
 
+.text-success {
+  color: #6caa08 !important;
+}
 .left-side .btn-delete {
   background: #ff0000;
   border-radius: 10px;
@@ -102,7 +101,7 @@
   transition: 0.4s;
 }
 
-.left-side .row-task {
+.left-side .row-todo {
   margin: 10px 0;
 }
 
@@ -133,7 +132,7 @@
   border-radius: 3px;
 }
 
-.right-side .card .label-input-task {
+.right-side .card .label-input {
   display: block;
   font-style: normal;
   font-weight: 300;
@@ -143,7 +142,7 @@
   margin-top: 80px;
 }
 
-.right-side .card .input-task {
+.right-side .card .input {
   margin-top: 10px;
   background: #f1f1f1;
   border: 2px solid #d5d5d5;
@@ -154,12 +153,12 @@
   font-size: 20px;
 }
 
-.right-side .card .input-task:focus {
+.right-side .card .input:focus {
   outline: 0;
   padding: 15px;
 }
 
-.right-side .card .btn-add-task {
+.right-side .card .btn-add {
   height: 55px;
   width: 100%;
   background: #00d1ff;
@@ -175,12 +174,12 @@
   cursor: pointer;
 }
 
-.right-side .card .btn-add-task:active {
+.right-side .card .btn-add:active {
   background: #008baa;
   transition: 0.4s;
 }
 
-.right-side .card .desc-input-task {
+.right-side .card .desc {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
