@@ -1,88 +1,33 @@
 let todos = [];
 
-const showTodo = document.getElementById("show-todo");
-const btnSubmit = document.getElementById("btn-input-todo");
+const showGrade = document.getElementById("show-grade");
+const btnSubmit = document.getElementById("btn-submit");
 
-function renderTodo() {
-  let todoElements = "";
+btnSubmit.addEventListener("click", () => {
+  const input = document.getElementById("input-value");
 
-  if (todos.length < 1) {
-    todoElements += `
-        <div class="text-center">
-            <img src="img/todo_2.svg" alt="img todo" class="img-todo-left">
-        </div>
-        `;
-  }
-
-  for (elem of todos) {
-    const id = elem.id;
-    const description = elem.description;
-    const isDone = elem.isDone;
-
-    let btnDone = `<button class="btn-done" onclick="doneTodo(${id})">Done</button>`;
-
-    let textSuccess = "";
-
-    if (isDone) {
-      btnDone = "";
-      textSuccess = "text-success";
-    }
-
-    todoElements += `
-        <div class="todo">
-            <p class="todo-name ${textSuccess}">${description}</p>
-            <div class="todo-isdone">
-                ${btnDone}
-                <button class="btn-delete" onclick="deleteTodo(${id})">X</button>
-            </div>
-        </div>
-        `;
-  }
-
-  showTodo.innerHTML = todoElements;
-}
-
-btnSubmit.addEventListener("click", addTodo);
-
-function addTodo() {
-  const todoInput = document.getElementById("input-todo");
-
-  if (!todoInput.value) {
-    alert("todo input is not be empty");
+  if (!input.value) {
+    alert("value input must not be empty");
     return;
   }
 
-  const todo = {
-    id: Date.now(),
-    description: todoInput.value,
-    isDone: false,
-  };
+  const result = checkGrade(input.value);
 
-  todos.push(todo);
+  const element = `<p>${result}<p>`;
 
-  todoInput.value = "";
-  renderTodo();
-}
+  showGrade.innerHTML = element;
+});
 
-function deleteTodo(id) {
-  for (let index = 0; index < todos.length; index++) {
-    console.log("id", id);
-    console.log("index", index);
-    if (id === todos[index].id) {
-      todos.splice(index, 1);
-    }
+function checkGrade(value) {
+  if (value >= 90) {
+    return "Your grade is A+, Marvelous!!";
+  } else if (value > 80 && value <= 90) {
+    return "Your grade is A, Excellent!";
+  } else if (value > 70 && value <= 80) {
+    return "Your grade is B, Good";
+  } else if (value >= 60 && value <= 70) {
+    return "Your grade is C, Not Bad";
+  } else {
+    return "You must take remedial!!!";
   }
-  renderTodo();
 }
-
-// Done TODO
-function doneTodo(id) {
-  for (i = 0; i < todos.length; i++) {
-    if (id == todos[i].id) {
-      todos[i].isDone = true;
-    }
-  }
-  renderTodo();
-}
-
-renderTodo();
