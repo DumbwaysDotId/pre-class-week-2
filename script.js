@@ -1,7 +1,7 @@
 let todos = [];
 
 const showTodo = document.getElementById("show-todo");
-const btnSubmit = document.getElementById("btn-submit");
+const form = document.getElementById("form");
 
 function renderTodo() {
   let todoElements = "";
@@ -42,7 +42,11 @@ function renderTodo() {
   showTodo.innerHTML = todoElements;
 }
 
-btnSubmit.addEventListener("click", addTodo);
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  addTodo();
+});
 
 function addTodo() {
   const todoInput = document.getElementById("input-todo");
