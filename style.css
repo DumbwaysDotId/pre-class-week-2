@@ -32,10 +32,11 @@
 .left-side .header {
   font-style: normal;
   font-weight: bold;
-  font-size: 96px;
+  font-size: 64px;
   line-height: 1.2;
   margin-bottom: 34px;
   overflow-y: hidden;
+  color: rgb(128, 35, 7);
 }
 
 .left-side .form-group {
