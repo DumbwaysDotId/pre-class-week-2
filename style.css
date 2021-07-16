@@ -43,7 +43,7 @@
   font-size: 18px;
   line-height: 27px;
   padding-left: 8px;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .left-side .input {
@@ -82,7 +82,6 @@
   background: #008baa;
   transition: 0.4s;
 }
-
 
 div#show-grade p {
   font-size: 36px;

@@ -1,14 +1,10 @@
 let todos = [];
 
 const showGrade = document.getElementById("show-grade");
-const btnSubmit = document.getElementById("btn-submit");
+const form = document.getElementById("form");
 
-btnSubmit.addEventListener("click", () => {
+form.addEventListener("submit", () => {
   const input = document.getElementById("input-value");
-
-  if (input.value > 100) {
-    return alert("Maximum value is 100");
-  }
 
   const result = checkGrade(input.value);
 
