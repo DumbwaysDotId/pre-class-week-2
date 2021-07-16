@@ -13,7 +13,7 @@ btnSubmit.addEventListener("click", () => {
 
   const result = checkGrade(input.value);
 
-  const element = `<p>${result}<p>`;
+  const element = `<p class="text-center">${result}<p>`;
 
   showGrade.innerHTML = element;
 });

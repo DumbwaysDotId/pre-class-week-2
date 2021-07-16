@@ -8,14 +8,14 @@
     <div class="container">
       <div class="left-side">
         <div class="header">Grading App</div>
-        <p class="paragraph">below is your grade</p>
-        <div id="show-grade"></div>
+        <label for="input-value" class="label-input">Input Your Value</label>
+        <input type="number" id="input-value" class="input" />
+        <button class="btn-add" id="btn-submit">Check Grade</button>
       </div>
       <div class="right-side">
         <div class="card">
-          <label for="input-value" class="label-input">Input Your Value</label>
-          <input type="number" id="input-value" class="input" />
-          <button class="btn-add" id="btn-submit">Check Grade</button>
+          <h1 class="paragraph text-center blue-color">Result</h1>
+          <div id="show-grade"></div>
         </div>
       </div>
     </div>
