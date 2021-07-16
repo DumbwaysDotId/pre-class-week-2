@@ -9,7 +9,6 @@
 
 .container {
   display: flex;
-  /* background-color: aqua; */
   height: 100vh;
 }
 
@@ -22,13 +21,12 @@
 }
 
 .brown {
-  color:rgb(128, 35, 7)
+  color: rgb(128, 35, 7);
 }
 /* LEFT SIDE */
 .left-side {
   padding: 40px 40px;
-  /* background-color: burlywood; */
-  flex: 38%;
+  flex: 40%;
 }
 
 .left-side .header {
@@ -90,23 +88,23 @@
   transition: 0.4s;
 }
 
-
 div#show-greeting p {
   font-size: 36px;
 }
 /* RIGHT SIDE */
 .right-side {
-  /* background-color: rgb(235, 235, 235); */
   background-image: url("./img/background.jpg");
-  flex: 62%;
+  flex: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 
 .right-side .card {
   background: #fefefe;
-  width: 750px;
+  max-width: 750px;
+  width: 100%;
   min-height: 500px;
   padding: 0px 50px;
   border-radius: 3px;
