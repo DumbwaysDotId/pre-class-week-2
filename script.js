@@ -7,7 +7,7 @@ function addTask() {
   const numberInput = document.getElementById("input-number");
   let elements = "";
   for (let i = 1; i <= numberInput.value; i++) {
-    elements += `<span>${i}</span>`;
+    elements += `<p>${i}</p>`;
   }
   console.log(elements);
   showNumber.innerHTML = elements;
