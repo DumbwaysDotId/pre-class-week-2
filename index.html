@@ -1,43 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>People Data</title>
+    <title>Calculator App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="left-side">
-        <h1 class="header">People Data</h1>
-        <form id="form">
-          <div class="form-group">
-            <label for="input-name" class="label-input">Name</label>
-            <input type="text" id="input-name" class="input" required />
-          </div>
-          <div class="form-group">
-            <label for="input-email" class="label-input">Email</label>
-            <input type="email" id="input-email" class="input" required />
-          </div>
-          <div class="form-group">
-            <label for="input-gender" class="label-input">Gender</label>
-            <select id="input-gender" class="input" required>
-              <option value="" disabled selected>Options...</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="input-address" class="label-input">Address</label>
-            <input type="text" id="input-address" class="input" required />
-          </div>
-          <button class="btn-submit" id="btn-submit" type="submit">
-            Submit
+        <h1 class="header">Calculator App</h1>
+        <div class="form-group">
+          <label for="input-name" class="label-input">Operand 1</label>
+          <input type="number" id="input-operand-1" class="input" required />
+        </div>
+        <div class="form-group">
+          <label for="input-email" class="label-input">Operand 2</label>
+          <input type="number" id="input-operand-2" class="input" required />
+        </div>
+        <div class="btn-group">
+          <button class="btn-submit" id="btn-addition">Addition</button>
+          <button class="btn-submit" id="btn-subtraction">Subtraction</button>
+          <button class="btn-submit" id="btn-multiplication">
+            Multiplication
           </button>
-        </form>
+          <button class="btn-submit" id="btn-division">Division</button>
+        </div>
       </div>
       <div class="right-side">
         <div class="card">
           <h1 class="text-center blue">Result</h1>
-          <div id="show-data"></div>
+          <div id="show-result"></div>
         </div>
       </div>
     </div>

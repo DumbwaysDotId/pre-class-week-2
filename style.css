@@ -33,21 +33,6 @@
   transition: 0.4s;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-td,
-th {
-  border: 1px solid #dddddd;
-  padding: 8px;
-}
-.img {
-  width: 100%;
-  max-width: 400px;
-}
-
 .text-center {
   text-align: center;
 }
@@ -56,6 +41,9 @@ th {
   color: #120b6d;
 }
 
+div#show-result p {
+  font-size: 36px;
+}
 /* LEFT SIDE */
 .left-side {
   padding: 40px 40px;
@@ -101,9 +89,17 @@ th {
   outline: 0;
 }
 
-.left-side .btn-submit {
+.left-side .btn-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.left-side .btn-group .btn-submit {
   height: 55px;
   width: 100%;
+  max-width: 250px;
+  padding: 0 8px;
   background: #120b6d;
   border-radius: 10px;
   border: 0;
