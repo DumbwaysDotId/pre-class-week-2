@@ -1,9 +1,11 @@
 let todos = [];
 
 const showType = document.getElementById("show-type");
-const btnSubmit = document.getElementById("btn-submit");
+const form = document.getElementById("form");
 
-btnSubmit.addEventListener("click", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
   const input = document.getElementById("input-value");
 
   const result = checkOddEven(input.value);
@@ -15,8 +17,8 @@ btnSubmit.addEventListener("click", () => {
 
 function checkOddEven(value) {
   if (value % 2 !== 0) {
-    return "Odd Number"
+    return "Odd Number";
   } else {
-    return "Even Number"
+    return "Even Number";
   }
 }
