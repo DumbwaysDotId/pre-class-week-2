@@ -1,16 +1,17 @@
 let todos = [];
 
 const showGreeting = document.getElementById("show-greeting");
-const btnSubmit = document.getElementById("btn-submit");
+const form = document.getElementById("form");
 
-btnSubmit.addEventListener("click", () => {
-  
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
   const inputName = document.getElementById("input-name");
   const dateTime = document.getElementById("input-time");
 
   const date = new Date(dateTime.value);
   const result = greeting(date.getHours(), inputName.value);
-  
+
   const element = `<p class="text-center">${result}<p>`;
   showGreeting.innerHTML = element;
 });
