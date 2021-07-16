@@ -3,7 +3,28 @@ const users = [];
 const showData = document.getElementById("show-data");
 const btnSubmit = document.getElementById("btn-submit");
 
-function renderTodo() {
+class User {
+  constructor(id, name, email, gender, address) {
+    this.id = id;
+    this.name = name;
+    this.email = email;
+    this.gender = gender;
+    this.address = address;
+  }
+
+  renderToElements() {
+    return `
+    <tr id="${this.id}">
+      <td class="text-center">${this.name}</td>
+      <td class="text-center">${this.email}</td>
+      <td class="text-center">${this.gender}</td>
+      <td class="text-center">${this.address}</td>
+      <td class="text-center"><button class="btn-delete" onclick="deleteUser(${this.id})">Delete</button></td>
+    </tr>
+    `;
+  }
+}
+function renderData() {
   let HTMLElements = "";
 
   if (users.length < 1) {
@@ -23,23 +44,10 @@ function renderTodo() {
           <th>Action</th>
         </tr>
     `;
-    for (elem of users) {
-      const id = elem.id;
-      const name = elem.name;
-      const email = elem.email;
-      const gender = elem.gender;
-      const address = elem.address;
-
-      HTMLElements += `
-          <tr id="${id}">
-            <td class="text-center">${name}</td>
-            <td class="text-center">${email}</td>
-            <td class="text-center">${gender}</td>
-            <td class="text-center">${address}</td>
-            <td class="text-center"><button class="btn-delete" onclick="deleteTodo(${id})">Delete</button></td>
-          </tr>
-          `;
+    for (user of users) {
+      HTMLElements += user.renderToElements();
     }
+
     HTMLElements += "</table>";
   }
 
@@ -54,13 +62,15 @@ function addUser() {
   const inputGender = document.getElementById("input-gender");
   const inputAddress = document.getElementById("input-address");
 
-  const user = {
-    id: Date.now(),
-    name: inputName.value,
-    email: inputEmail.value,
-    gender: inputGender.value,
-    address: inputAddress.value,
-  };
+  const user = new User(
+    Date.now(),
+    inputName.value,
+    inputEmail.value,
+    inputGender.value,
+    inputAddress.value
+  );
+
+  console.log("user intance: ", user);
 
   users.push(user);
 
@@ -68,18 +78,16 @@ function addUser() {
   inputEmail.value = "";
   inputGender.value = "";
   inputAddress.value = "";
-  renderTodo();
+  renderData();
 }
 
-function deleteTodo(id) {
+function deleteUser(id) {
   for (let index = 0; index < users.length; index++) {
-    console.log("id", id);
-    console.log("index", index);
     if (id === users[index].id) {
       users.splice(index, 1);
     }
   }
-  renderTodo();
+  renderData();
 }
 
-renderTodo();
+renderData();
