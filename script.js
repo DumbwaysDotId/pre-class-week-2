@@ -1,7 +1,7 @@
 let todos = [];
 
 const showTodo = document.getElementById("show-todo");
-const btnSubmit = document.getElementById("btn-input-todo");
+const btnSubmit = document.getElementById("btn-submit");
 
 function renderTodo() {
   let todoElements = "";
@@ -9,7 +9,7 @@ function renderTodo() {
   if (todos.length < 1) {
     todoElements += `
         <div class="text-center">
-            <img src="img/todo.svg" alt="img todo" class="img-todo-left">
+            <img src="img/todo.svg" alt="img todo" class="img-not-found">
         </div>
         `;
   }
