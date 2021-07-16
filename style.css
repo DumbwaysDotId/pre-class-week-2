@@ -17,8 +17,12 @@
   text-align: center;
 }
 
-.blue-color {
+.blue {
   color: rgb(0, 140, 255);
+}
+
+.brown {
+  color:rgb(128, 35, 7)
 }
 /* LEFT SIDE */
 .left-side {
@@ -36,17 +40,20 @@
   overflow-y: hidden;
 }
 
-.left-side .label-input {
+.left-side .form-group {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.left-side .form-group .label-input {
   display: block;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 27px;
   padding-left: 8px;
-  margin-top: 80px;
 }
 
-.left-side .input {
+.left-side .form-group .input {
   margin-top: 10px;
   background: #f1f1f1;
   border: 2px solid #d5d5d5;
@@ -58,14 +65,14 @@
   font-size: 20px;
 }
 
-.left-side .input:focus {
+.left-side .form-group .input:focus {
   outline: 0;
 }
 
 .left-side .btn-add {
   height: 55px;
   width: 100%;
-  background: rgb(0, 140, 255);
+  background: rgb(128, 35, 7);
   border-radius: 10px;
   border: 0;
   color: #ffffff;
@@ -84,13 +91,13 @@
 }
 
 
-div#show-grade p {
-  font-size: 24px;
+div#show-greeting p {
+  font-size: 36px;
 }
 /* RIGHT SIDE */
 .right-side {
   /* background-color: rgb(235, 235, 235); */
-  background-image: url("./img/background.png");
+  background-image: url("./img/background.jpg");
   flex: 62%;
   display: flex;
   align-items: center;
@@ -108,7 +115,7 @@ div#show-grade p {
 .right-side .card h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 56px;
   line-height: 1.5;
   margin-bottom: 20px;
 }

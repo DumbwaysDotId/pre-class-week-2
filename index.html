@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Grading App</title>
+    <title>Greeting App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="left-side">
-        <div class="header">Grading App</div>
-        <label for="input-value" class="label-input">Input Your Value</label>
-        <input type="number" id="input-value" class="input" />
-        <button class="btn-add" id="btn-submit">Check Grade</button>
+        <div class="header">Greeting App</div>
+        <div class="form-group">
+          <label for="input-name" class="label-input">Your name</label>
+          <input type="text" id="input-name" class="input" required/>
+        </div>
+        <div class="form-group">
+          <label for="input-time" class="label-input">Input Time</label>
+          <input type="datetime-local" id="input-time" class="input" required/>
+        </div>
+        <button class="btn-add" id="btn-submit">Submit</button>
       </div>
       <div class="right-side">
         <div class="card">
-          <h1 class="paragraph text-center blue-color">Result</h1>
-          <div id="show-grade"></div>
+          <h1 class="text-center brown">Result</h1>
+          <div id="show-greeting"></div>
         </div>
       </div>
     </div>
