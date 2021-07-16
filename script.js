@@ -1,85 +1,83 @@
-let todos = [];
+const users = [];
 
-const showTodo = document.getElementById("show-todo");
-const btnSubmit = document.getElementById("btn-input-todo");
+const showData = document.getElementById("show-data");
+const btnSubmit = document.getElementById("btn-submit");
 
 function renderTodo() {
-  let todoElements = "";
+  let HTMLElements = "";
 
-  if (todos.length < 1) {
-    todoElements += `
+  if (users.length < 1) {
+    HTMLElements += `
         <div class="text-center">
-            <img src="img/todo.svg" alt="img todo" class="img-todo-left">
+            <img src="img/no_data.svg" alt="no data" class="img">
         </div>
         `;
-  }
+  } else {
+    HTMLElements += `
+      <table>
+        <tr>
+         <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Address</th>
+          <th>Action</th>
+        </tr>
+    `;
+    for (elem of users) {
+      const id = elem.id;
+      const name = elem.name;
+      const email = elem.email;
+      const gender = elem.gender;
+      const address = elem.address;
 
-  for (elem of todos) {
-    const id = elem.id;
-    const description = elem.description;
-    const isDone = elem.isDone;
-
-    let btnDone = `<button class="btn-done" onclick="doneTodo(${id})">Done</button>`;
-
-    let textSuccess = "";
-
-    if (isDone) {
-      btnDone = "";
-      textSuccess = "text-success";
+      HTMLElements += `
+          <tr id="${id}">
+            <td class="text-center">${name}</td>
+            <td class="text-center">${email}</td>
+            <td class="text-center">${gender}</td>
+            <td class="text-center">${address}</td>
+            <td class="text-center"><button class="btn-delete" onclick="deleteTodo(${id})">&#x7F</button></td>
+          </tr>
+          <hr>
+          `;
     }
-
-    todoElements += `
-        <div class="todo">
-            <p class="todo-name ${textSuccess}">${description}</p>
-            <div class="todo-isdone">
-                ${btnDone}
-                <button class="btn-delete" onclick="deleteTodo(${id})">X</button>
-            </div>
-        </div>
-        `;
+    HTMLElements += "</table>";
   }
 
-  showTodo.innerHTML = todoElements;
+  showData.innerHTML = HTMLElements;
 }
 
-btnSubmit.addEventListener("click", addTodo);
+btnSubmit.addEventListener("click", addUser);
 
-function addTodo() {
-  const todoInput = document.getElementById("input-todo");
+function addUser() {
+  const inputName = document.getElementById("input-name");
+  const inputEmail = document.getElementById("input-email");
+  const inputGender = document.getElementById("input-gender");
+  const inputAddress = document.getElementById("input-address");
 
-  if (!todoInput.value) {
-    alert("todo input is not be empty");
-    return;
-  }
-
-  const todo = {
+  const user = {
     id: Date.now(),
-    description: todoInput.value,
-    isDone: false,
+    name: inputName.value,
+    email: inputEmail.value,
+    gender: inputGender.value,
+    address: inputAddress.value,
   };
 
-  todos.push(todo);
+  users.push(user);
 
-  todoInput.value = "";
+  inputName.value = "";
+  inputEmail.value = "";
+  inputGender.value = "";
+  inputAddress.value = "";
   renderTodo();
 }
 
 function deleteTodo(id) {
-  for (let index = 0; index < todos.length; index++) {
+  for (let index = 0; index < users.length; index++) {
     console.log("id", id);
     console.log("index", index);
-    if (id === todos[index].id) {
-      todos.splice(index, 1);
-    }
-  }
-  renderTodo();
-}
-
-// Done TODO
-function doneTodo(id) {
-  for (i = 0; i < todos.length; i++) {
-    if (id == todos[i].id) {
-      todos[i].isDone = true;
+    if (id === users[index].id) {
+      users.splice(index, 1);
     }
   }
   renderTodo();

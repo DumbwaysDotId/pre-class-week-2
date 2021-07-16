@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Todo App</title>
+    <title>People Data</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="left-side">
-        <div class="header">Todo</div>
-        <p class="paragraph">below is a list of your duties</p>
-        <div id="show-todo"></div>
+        <h1 class="header">People Data</h1>
+        <div class="form-group">
+          <label for="input-name" class="label-input">Your Name</label>
+          <input type="text" id="input-name" class="input" required />
+        </div>
+        <div class="form-group">
+          <label for="input-email" class="label-input">Your Email</label>
+          <input type="email" id="input-email" class="input" required />
+        </div>
+        <div class="form-group">
+          <label for="input-gender" class="label-input">Your Gender</label>
+          <select id="input-gender" class="input" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="input-address" class="label-input">Your Address</label>
+          <input type="text" id="input-address" class="input" required />
+        </div>
+        <button class="btn-submit" id="btn-submit">Submit</button>
       </div>
       <div class="right-side">
         <div class="card">
-          <label for="input-todo" class="label-input">Input Your Todo</label>
-          <input type="text" id="input-todo" class="input" />
-          <button class="btn-add" id="btn-input-todo">Add Todo</button>
-          <p class="desc">
-            to add to your todo list please type it in the input your Todo
-          </p>
+          <h1 class="text-center blue">Result</h1>
+          <div id="show-data"></div>
         </div>
       </div>
     </div>
