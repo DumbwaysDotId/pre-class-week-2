@@ -16,6 +16,7 @@ additionButton.addEventListener("click", () => {
 
   showResult.innerHTML = element;
 });
+
 subtractionButton.addEventListener("click", () => {
   const result = parseInt(operand1.value) - parseInt(operand2.value);
 
@@ -23,6 +24,7 @@ subtractionButton.addEventListener("click", () => {
 
   showResult.innerHTML = element;
 });
+
 multiplicationButton.addEventListener("click", () => {
   const result = parseInt(operand1.value) * parseInt(operand2.value);
 
@@ -30,6 +32,7 @@ multiplicationButton.addEventListener("click", () => {
 
   showResult.innerHTML = element;
 });
+
 divisionButton.addEventListener("click", () => {
   const result = parseInt(operand1.value) / parseInt(operand2.value);
 

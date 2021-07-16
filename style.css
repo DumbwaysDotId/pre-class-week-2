@@ -12,33 +12,12 @@
   height: 100vh;
 }
 
-.btn-delete {
-  background: #ff0000;
-  border-radius: 10px;
-  width: 100%;
-  padding: 0 5px;
-  height: 35px;
-  border: 0;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 27px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.btn-delete:active {
-  background: #850000;
-  transition: 0.4s;
-}
-
 .text-center {
   text-align: center;
 }
 
-.blue {
-  color: #120b6d;
+.pink {
+  color: #db08a6;
 }
 
 div#show-result p {
@@ -100,7 +79,7 @@ div#show-result p {
   width: 100%;
   max-width: 250px;
   padding: 0 8px;
-  background: #120b6d;
+  background: #db08a6;
   border-radius: 10px;
   border: 0;
   color: #ffffff;
@@ -114,13 +93,14 @@ div#show-result p {
 }
 
 .left-side .btn-submit:active {
-  background: #008baa;
+  background: #e922b7;
   transition: 0.4s;
 }
 
 /* RIGHT SIDE */
 .right-side {
   background-image: url("./img/background.jpg");
+  background-size: 100%;
   flex: 60%;
   display: flex;
   align-items: center;

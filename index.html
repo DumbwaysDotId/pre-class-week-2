@@ -10,11 +10,23 @@
         <h1 class="header">Calculator App</h1>
         <div class="form-group">
           <label for="input-name" class="label-input">Operand 1</label>
-          <input type="number" id="input-operand-1" class="input" required />
+          <input
+            type="number"
+            value="0"
+            id="input-operand-1"
+            class="input"
+            required
+          />
         </div>
         <div class="form-group">
           <label for="input-email" class="label-input">Operand 2</label>
-          <input type="number" id="input-operand-2" class="input" required />
+          <input
+            type="number"
+            value="0"
+            id="input-operand-2"
+            class="input"
+            required
+          />
         </div>
         <div class="btn-group">
           <button class="btn-submit" id="btn-addition">Addition</button>
@@ -27,7 +39,7 @@
       </div>
       <div class="right-side">
         <div class="card">
-          <h1 class="text-center blue">Result</h1>
+          <h1 class="text-center pink">Result</h1>
           <div id="show-result"></div>
         </div>
       </div>
