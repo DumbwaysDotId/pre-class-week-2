@@ -120,11 +120,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 
 .right-side .card {
   background: #fefefe;
   max-width: 750px;
+  width: 100%;
   min-height: 400px;
   padding: 0px 50px;
   border-radius: 3px;
