@@ -18,7 +18,7 @@
 }
 
 .blue {
-  color: rgb(0, 140, 255);
+  color: #020f5a
 }
 /* LEFT SIDE */
 .left-side {
@@ -34,6 +34,7 @@
   line-height: 1.2;
   margin-bottom: 34px;
   overflow-y: hidden;
+  color: #020f5a
 }
 
 .left-side .label-input {
@@ -65,7 +66,7 @@
 .left-side .btn-submit {
   height: 55px;
   width: 100%;
-  background: rgb(0, 140, 255);
+  background: #020f5a;
   border-radius: 10px;
   border: 0;
   color: #ffffff;
@@ -79,18 +80,18 @@
 }
 
 .left-side .btn-submit:active {
-  background: #008baa;
+  background: #011fc7;
   transition: 0.4s;
 }
 
 
-div#show-grade p {
+div#show-type p {
   font-size: 36px;
 }
 /* RIGHT SIDE */
 .right-side {
   /* background-color: rgb(235, 235, 235); */
-  background-image: url("./img/background.png");
+  background-image: url("./img/background.jpg");
   flex: 62%;
   display: flex;
   align-items: center;
