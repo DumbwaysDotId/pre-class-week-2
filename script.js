@@ -1,7 +1,7 @@
 const users = [];
 
 const showData = document.getElementById("show-data");
-const btnSubmit = document.getElementById("btn-submit");
+const form = document.getElementById("form");
 
 class User {
   constructor(id, name, email, gender, address) {
@@ -54,7 +54,11 @@ function renderData() {
   showData.innerHTML = HTMLElements;
 }
 
-btnSubmit.addEventListener("click", addUser);
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  addUser();
+});
 
 function addUser() {
   const inputName = document.getElementById("input-name");
