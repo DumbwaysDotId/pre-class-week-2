@@ -1,14 +1,18 @@
 const showNumber = document.getElementById("show-number");
-const btnSubmit = document.getElementById("btn-input-number");
+const form = document.getElementById("form");
 
-btnSubmit.addEventListener("click", addTask);
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-function addTask() {
+  proceedNumber();
+});
+
+function proceedNumber() {
   const numberInput = document.getElementById("input-number");
   let elements = "";
   for (let i = 1; i <= numberInput.value; i++) {
     elements += `<p>${i}</p>`;
   }
-  console.log(elements);
+
   showNumber.innerHTML = elements;
 }
