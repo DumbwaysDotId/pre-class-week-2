@@ -6,6 +6,10 @@ const btnSubmit = document.getElementById("btn-submit");
 btnSubmit.addEventListener("click", () => {
   const input = document.getElementById("input-value");
 
+  if (input.value > 100) {
+    return alert("Maximum value is 100");
+  }
+
   const result = checkGrade(input.value);
 
   const element = `<p class="text-center">${result}<p>`;
@@ -14,7 +18,7 @@ btnSubmit.addEventListener("click", () => {
 });
 
 function checkGrade(value) {
-  if (value >= 90) {
+  if (value >= 90 && value <= 100) {
     return "Your grade is A+, Marvelous!!";
   } else if (value > 80 && value <= 90) {
     return "Your grade is A, Excellent!";
