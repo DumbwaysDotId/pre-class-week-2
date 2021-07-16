@@ -9,7 +9,6 @@
 
 .container {
   display: flex;
-  /* background-color: aqua; */
   height: 100vh;
 }
 
@@ -18,13 +17,12 @@
 }
 
 .blue {
-  color: #020f5a
+  color: #020f5a;
 }
 /* LEFT SIDE */
 .left-side {
   padding: 40px 40px;
-  /* background-color: burlywood; */
-  flex: 38%;
+  flex: 40%;
 }
 
 .left-side .header {
@@ -34,7 +32,7 @@
   line-height: 1.2;
   margin-bottom: 34px;
   overflow-y: hidden;
-  color: #020f5a
+  color: #020f5a;
 }
 
 .left-side .label-input {
@@ -84,23 +82,23 @@
   transition: 0.4s;
 }
 
-
 div#show-type p {
   font-size: 36px;
 }
 /* RIGHT SIDE */
 .right-side {
-  /* background-color: rgb(235, 235, 235); */
   background-image: url("./img/background.jpg");
-  flex: 62%;
+  flex: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 
 .right-side .card {
   background: #fefefe;
-  width: 750px;
+  max-width: 750px;
+  width: 100%;
   min-height: 500px;
   padding: 0px 50px;
   border-radius: 3px;
