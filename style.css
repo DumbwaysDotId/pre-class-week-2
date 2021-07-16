@@ -9,7 +9,6 @@
 
 .container {
   display: flex;
-  /* background-color: aqua; */
   height: 100vh;
 }
 
@@ -17,6 +16,7 @@
   background: #ff0000;
   border-radius: 10px;
   width: 100%;
+  padding: 0 5px;
   height: 35px;
   border: 0;
   font-style: normal;
@@ -59,7 +59,7 @@ th {
 /* LEFT SIDE */
 .left-side {
   padding: 40px 40px;
-  flex: 38%;
+  flex: 40%;
 }
 
 .left-side .header {
@@ -125,7 +125,7 @@ th {
 /* RIGHT SIDE */
 .right-side {
   background-image: url("./img/background.jpg");
-  flex: 62%;
+  flex: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,7 +135,6 @@ th {
   background: #fefefe;
   max-width: 750px;
   min-width: 450px;
-  width: 100%;
   min-height: 500px;
   padding: 10px 50px;
   border-radius: 3px;
