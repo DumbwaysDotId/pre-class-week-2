@@ -3,7 +3,9 @@ let todos = [];
 const showGrade = document.getElementById("show-grade");
 const form = document.getElementById("form");
 
-form.addEventListener("submit", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
   const input = document.getElementById("input-value");
 
   const result = checkGrade(input.value);
