@@ -25,6 +25,7 @@
   line-height: 1.2;
   margin-bottom: 34px;
   overflow-y: hidden;
+  color: #ff63ef;
 }
 
 .left-side .paragraph {
@@ -161,7 +162,7 @@
 .right-side .card .btn-submit {
   height: 55px;
   width: 100%;
-  background: #00d1ff;
+  background: #ff63ef;
   border-radius: 10px;
   border: 0;
   color: #ffffff;
@@ -175,7 +176,7 @@
 }
 
 .right-side .card .btn-submit:active {
-  background: #008baa;
+  background: #fd3bea;
   transition: 0.4s;
 }
 
