@@ -6,11 +6,6 @@ const btnSubmit = document.getElementById("btn-submit");
 btnSubmit.addEventListener("click", () => {
   const input = document.getElementById("input-value");
 
-  if (!input.value) {
-    alert("value input must not be empty");
-    return;
-  }
-
   const result = checkGrade(input.value);
 
   const element = `<p class="text-center">${result}<p>`;

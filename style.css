@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-.blue-color {
+.blue {
   color: rgb(0, 140, 255);
 }
 /* LEFT SIDE */
@@ -62,7 +62,7 @@
   outline: 0;
 }
 
-.left-side .btn-add {
+.left-side .btn-submit {
   height: 55px;
   width: 100%;
   background: rgb(0, 140, 255);
@@ -78,14 +78,14 @@
   cursor: pointer;
 }
 
-.left-side .btn-add:active {
+.left-side .btn-submit:active {
   background: #008baa;
   transition: 0.4s;
 }
 
 
 div#show-grade p {
-  font-size: 24px;
+  font-size: 36px;
 }
 /* RIGHT SIDE */
 .right-side {
