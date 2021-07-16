@@ -69,6 +69,7 @@ th {
   line-height: 1.2;
   margin-bottom: 34px;
   overflow-y: hidden;
+  color: #120b6d;
 }
 
 .left-side .form-group {
@@ -118,13 +119,14 @@ th {
 }
 
 .left-side .btn-submit:active {
-  background: #008baa;
+  background: #0c074d;
   transition: 0.4s;
 }
 
 /* RIGHT SIDE */
 .right-side {
   background-image: url("./img/background.jpg");
+  background-size: 100%;
   flex: 60%;
   display: flex;
   align-items: center;
