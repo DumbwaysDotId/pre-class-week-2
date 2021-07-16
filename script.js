@@ -36,9 +36,8 @@ function renderTodo() {
             <td class="text-center">${email}</td>
             <td class="text-center">${gender}</td>
             <td class="text-center">${address}</td>
-            <td class="text-center"><button class="btn-delete" onclick="deleteTodo(${id})">&#x7F</button></td>
+            <td class="text-center"><button class="btn-delete" onclick="deleteTodo(${id})">Delete</button></td>
           </tr>
-          <hr>
           `;
     }
     HTMLElements += "</table>";

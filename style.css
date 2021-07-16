@@ -16,7 +16,7 @@
 .btn-delete {
   background: #ff0000;
   border-radius: 10px;
-  width: 32px;
+  width: 100%;
   height: 35px;
   border: 0;
   font-style: normal;
@@ -33,10 +33,16 @@
   transition: 0.4s;
 }
 
-div#show-data table {
+table {
   width: 100%;
+  border-collapse: collapse;
 }
 
+td,
+th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
 .img {
   width: 100%;
   max-width: 400px;
