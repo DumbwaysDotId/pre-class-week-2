@@ -117,7 +117,7 @@
 /* RIGHT SIDE */
 .right-side {
   /* background-color: rgb(235, 235, 235); */
-  background-image: url("./img/background.png");
+  background-image: url("./img/background.jpg");
   flex: 62%;
   display: flex;
   align-items: center;

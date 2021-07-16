@@ -9,7 +9,7 @@ function renderTodo() {
   if (todos.length < 1) {
     todoElements += `
         <div class="text-center">
-            <img src="img/todo_2.svg" alt="img todo" class="img-todo-left">
+            <img src="img/todo.svg" alt="img todo" class="img-todo-left">
         </div>
         `;
   }
