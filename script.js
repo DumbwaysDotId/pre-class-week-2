@@ -1,19 +1,11 @@
-let todos = [];
-
 const showGrade = document.getElementById("show-grade");
-const form = document.getElementById("form");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
+function performCheckGrade() {
   const input = document.getElementById("input-value");
-
   const result = checkGrade(input.value);
-
   const element = `<p class="text-center">${result}<p>`;
-
   showGrade.innerHTML = element;
-});
+}
 
 function checkGrade(value) {
   if (value >= 90 && value <= 100) {

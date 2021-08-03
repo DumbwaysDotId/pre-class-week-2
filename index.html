@@ -8,17 +8,9 @@
     <div class="container">
       <div class="left-side">
         <div class="header">Grading App</div>
-        <form id="form">
           <label for="input-value" class="label-input">Input Your Value</label>
-          <input
-            type="number"
-            id="input-value"
-            class="input"
-            min="1"
-            max="100"
-            required
-          />
-          <button class="btn-submit" id="btn-submit" type="submit">
+          <input type="number" id="input-value" class="input" min="1" max="100" required />
+          <button class="btn-submit" id="btn-submit" onclick="performCheckGrade()">
             Check Grade
           </button>
         </form>
