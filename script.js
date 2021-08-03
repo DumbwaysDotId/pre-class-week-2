@@ -1,13 +1,6 @@
 const showNumber = document.getElementById("show-number");
-const form = document.getElementById("form");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  proceedNumber();
-});
-
-function proceedNumber() {
+function performLooping() {
   const numberInput = document.getElementById("input-number");
   let elements = "";
   for (let i = 1; i <= numberInput.value; i++) {
