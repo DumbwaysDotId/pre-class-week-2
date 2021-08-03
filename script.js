@@ -7,11 +7,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const input = document.getElementById("input-value");
-
   const result = checkOddEven(input.value);
-
   const element = `<p class="text-center">${result}<p>`;
-
+  
   showType.innerHTML = element;
 });
 
