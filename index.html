@@ -8,7 +8,6 @@
     <div class="container">
       <div class="left-side">
         <div class="header">Greeting App</div>
-        <form id="form">
           <div class="form-group">
             <label for="input-name" class="label-input">Your name</label>
             <input type="text" id="input-name" class="input" required/>
@@ -17,9 +16,8 @@
             <label for="input-time" class="label-input">Input Time</label>
             <input type="datetime-local" id="input-time" class="input" required/>
           </div>
-          <button class="btn-add" id="btn-submit" type="submit">Submit</button>
+          <button class="btn-add" id="btn-submit" onclick="performGreetings()">Submit</button>
         </div>
-        </form>
       <div class="right-side">
         <div class="card">
           <h1 class="text-center brown">Result</h1>

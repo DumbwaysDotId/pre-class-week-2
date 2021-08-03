@@ -1,11 +1,6 @@
-let todos = [];
-
 const showGreeting = document.getElementById("show-greeting");
-const form = document.getElementById("form");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
+function performGreetings() {
   const inputName = document.getElementById("input-name");
   const dateTime = document.getElementById("input-time");
 
@@ -14,7 +9,7 @@ form.addEventListener("submit", (e) => {
 
   const element = `<p class="text-center">${result}<p>`;
   showGreeting.innerHTML = element;
-});
+}
 
 function greeting(hour, userName) {
   if (hour >= 5 && hour < 12) {

@@ -30,7 +30,6 @@
 }
 
 .left-side .header {
-  font-style: normal;
   font-weight: bold;
   font-size: 64px;
   line-height: 1.2;
@@ -45,7 +44,6 @@
 }
 .left-side .form-group .label-input {
   display: block;
-  font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 27px;
@@ -75,7 +73,6 @@
   border-radius: 10px;
   border: 0;
   color: #ffffff;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 27px;
@@ -112,7 +109,6 @@ div#show-greeting p {
 }
 
 .right-side .card h1 {
-  font-style: normal;
   font-weight: bold;
   font-size: 56px;
   line-height: 1.5;
