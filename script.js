@@ -1,5 +1,3 @@
-const users = [];
-
 const showResult = document.getElementById("show-result");
 const additionButton = document.getElementById("btn-addition");
 const subtractionButton = document.getElementById("btn-subtraction");
