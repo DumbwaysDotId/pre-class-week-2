@@ -1,7 +1,6 @@
 const users = [];
 
 const showData = document.getElementById("show-data");
-const form = document.getElementById("form");
 
 class User {
   constructor(id, name, email, gender, address) {
@@ -24,7 +23,7 @@ class User {
     `;
   }
 }
-function renderData() {
+function renderUserData() {
   let HTMLElements = "";
 
   if (users.length < 1) {
@@ -54,12 +53,6 @@ function renderData() {
   showData.innerHTML = HTMLElements;
 }
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  addUser();
-});
-
 function addUser() {
   const inputName = document.getElementById("input-name");
   const inputEmail = document.getElementById("input-email");
@@ -74,15 +67,13 @@ function addUser() {
     inputAddress.value
   );
 
-  console.log("user intance: ", user);
-
   users.push(user);
 
-  inputName.value = "";
-  inputEmail.value = "";
-  inputGender.value = "";
-  inputAddress.value = "";
-  renderData();
+  inputName.value = " ";
+  inputEmail.value = " ";
+  inputGender.value = " ";
+  inputAddress.value = " ";
+  renderUserData();
 }
 
 function deleteUser(id) {
@@ -91,7 +82,7 @@ function deleteUser(id) {
       users.splice(index, 1);
     }
   }
-  renderData();
+  renderUserData();
 }
 
-renderData();
+renderUserData();
