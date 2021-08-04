@@ -1,9 +1,8 @@
 const users = [];
 
 const showData = document.getElementById("show-data");
-const form = document.getElementById("form");
 
-function renderTodo() {
+function renderUserData() {
   let HTMLElements = "";
 
   if (users.length < 1) {
@@ -36,7 +35,7 @@ function renderTodo() {
             <td class="text-center">${email}</td>
             <td class="text-center">${gender}</td>
             <td class="text-center">${address}</td>
-            <td class="text-center"><button class="btn-delete" onclick="deleteTodo(${id})">Delete</button></td>
+            <td class="text-center"><button class="btn-delete" onclick="deleteUser(${id})">Delete</button></td>
           </tr>
           `;
     }
@@ -45,12 +44,6 @@ function renderTodo() {
 
   showData.innerHTML = HTMLElements;
 }
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  addUser();
-});
 
 function addUser() {
   const inputName = document.getElementById("input-name");
@@ -72,10 +65,10 @@ function addUser() {
   inputEmail.value = "";
   inputGender.value = "";
   inputAddress.value = "";
-  renderTodo();
+  renderUserData();
 }
 
-function deleteTodo(id) {
+function deleteUser(id) {
   for (let index = 0; index < users.length; index++) {
     console.log("id", id);
     console.log("index", index);
@@ -83,7 +76,7 @@ function deleteTodo(id) {
       users.splice(index, 1);
     }
   }
-  renderTodo();
+  renderUserData();
 }
 
-renderTodo();
+renderUserData();
